@@ -1,0 +1,16 @@
+@mixin display ($align){
+    display: $align;
+}
+
+@mixin flex($horizontal,$vertical){
+    justify-content: $horizontal; //center space-between
+    vertical-align: $vertical; // center flex-end
+} 
+
+@mixin position ($positionValue){
+    position: $positionValue;
+}
+@mixin postionValues ($top,$left){
+    top:  $top;
+    left: $left;
+}

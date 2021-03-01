@@ -1,0 +1,40 @@
+@import  './../moduls/variable';
+@import './../moduls/mixins';
+@import  './../moduls/private';
+@import './../moduls/function';
+
+header {
+    background-color: $black ;
+    padding: $size02 0;
+    @include position (fixed);
+    @include postionValues (50px, 50px);
+    width: sum(1600px, 200px);
+    .flex {
+        @extend %container;
+        @include display(flex);
+        @include  flex(space-between,flex-end);
+        .logo {
+            font-size: $size02;
+        }
+        .navbar {
+            @include display(flex);
+            @include flex (center,center);
+            .navbar-li {
+                // font-size: $size03;
+                margin: 0 $size02;
+                @extend %title;
+                @media (max-width: 1024px){
+                    background-color: $red;
+                }
+            }
+        }
+    }
+    &:hover {
+        background-color: purple;
+    }
+    @media (max-width: 1024px){
+        background-color: $red;
+        @include display(block);
+    }
+}
+
